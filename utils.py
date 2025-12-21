@@ -8,7 +8,10 @@ def fmt(x):
 
 def to_text_clean(val):
     try:
-        return str(val).replace(".0", "").strip()
+        s = str(val).strip()
+        if s.endswith('.0'):
+            return s[:-2]
+        return s
     except:
         return ""
 
