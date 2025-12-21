@@ -1,4 +1,4 @@
-import streamlit as st
+streamlit as st
 from engine import load_all_data
 from filters_otc import apply_filters
 from report_simple import render_report
@@ -25,5 +25,6 @@ df_filtered = apply_filters(df)
 if df_filtered.empty:
     st.warning("Không có dữ liệu sau lọc.")
     st.stop()
+
 
 render_report(df_filtered, df_hcl)  # truyền df_hcl
