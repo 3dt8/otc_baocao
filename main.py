@@ -1,4 +1,4 @@
-from streamlit as st
+import streamlit as st
 from engine import load_all_data
 from filters_otc import apply_filters
 from report_simple import render_report
@@ -28,4 +28,5 @@ if df_filtered.empty:
 
 
 render_report(df_filtered, df_hcl)  # truyền df_hcl
+
 
